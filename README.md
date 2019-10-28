@@ -2,21 +2,20 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|usename|string|null: false|
+|name|string|null: false|
 |email|string|null: false|
 |password|string|null: false|
 ### Association
 - has_many :comments
 - has_many :chatgroups
 
-## chatgroupsテーブル
+## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|groupname|string|null: false|
-|user_id|integer|null: false, foreign_key: true|
+|name|string|null: false|
 ### Association
 - has_many :users
-- belongs_to :comment
+- has_many :comments
 
 ## commentsテーブル
 |Column|Type|Options|
@@ -26,6 +25,6 @@
 |user_id|integer|null: false, foreign_key: true|
 |chatgroup_id|integer|null: false, foreign_key: true|
 ### Association
-- has_many :users
+- belongs_to :user
 - belongs_to :chatgroup
 
