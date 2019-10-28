@@ -7,7 +7,7 @@
 |password|string|null: false|
 ### Association
 - has_many :comments
-- has_many :chatgroups
+- has_many :groups
 
 ## groupsテーブル
 |Column|Type|Options|
@@ -16,6 +16,15 @@
 ### Association
 - has_many :users
 - has_many :comments
+
+## users_groupsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :user
+- belongs_to :group
 
 ## commentsテーブル
 |Column|Type|Options|
@@ -26,5 +35,5 @@
 |chatgroup_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
-- belongs_to :chatgroup
+- belongs_to :group
 
