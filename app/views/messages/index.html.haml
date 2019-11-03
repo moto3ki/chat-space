@@ -1,0 +1,49 @@
+.wrapper
+
+  = render 'shared/side_bar'
+
+  .chat
+    .header
+      .left-header
+        .left-header__title
+          test-group
+        %ul.left-header__members
+          Member：
+          %li.member
+            佐立
+          %li.member
+            田中
+      .right-header
+        .right-header__button
+          Edit
+
+    .messages
+      .message
+        .upper-message
+          .upper-message__user-name
+            test-user
+          .upper-message__date
+            2019/02/13
+        .lower-meesage
+          .lower-message__content
+            こんにちは！
+      .message
+        .upper-message
+          .upper-message__user-name
+            test-user
+          .upper-message__date
+            2019/02/13
+        .lower-meesage
+          .lower-message__content
+            さようなら！
+
+    .form
+      %form
+        %input.form__message{type: 'text', value: 'type a message'}
+        .form__mask
+          %label.form__mask__image
+            = fa_icon 'image', class: 'icon'
+            %input.hidden{type: 'file'}
+        %input.form__submit{type: 'submit', value: 'Send'}
+
+
