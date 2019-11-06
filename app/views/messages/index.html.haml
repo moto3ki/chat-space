@@ -18,24 +18,7 @@
           Edit
 
     .messages
-      .message
-        .upper-message
-          .upper-message__user-name
-            test-user
-          .upper-message__date
-            2019/02/13
-        .lower-meesage
-          .lower-message__content
-            こんにちは！
-      .message
-        .upper-message
-          .upper-message__user-name
-            test-user
-          .upper-message__date
-            2019/02/13
-        .lower-meesage
-          .lower-message__content
-            さようなら！
+      = render @messages
 
     .form
       = form_for [@group, @message] do |f|
