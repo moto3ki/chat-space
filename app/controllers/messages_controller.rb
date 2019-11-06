@@ -5,9 +5,6 @@ class MessagesController < ApplicationController
     @message = Message.new
     @messages = @group.messages.includes(:user)
   end
-<<<<<<< Updated upstream
-end
-=======
 
   def create
     @message = @group.messages.new(message_params)
@@ -30,4 +27,3 @@ end
     @group = Group.find(params[:group_id])
   end
 end
->>>>>>> Stashed changes
