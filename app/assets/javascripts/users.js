@@ -1,3 +1,4 @@
+$(document).on('turbolinks:load', function() {
 $(function() {
   function addUser(user) {
     let html = `
@@ -54,7 +55,7 @@ $(function() {
         alert("通信エラーです。ユーザーが表示できません。");
       });
   });
-  $(document).on("click", ".chat-group-user__btn--add", function() {
+  $("#user-search-result").on("click", ".chat-group-user__btn--add", function() {
     console.log
     const userName = $(this).attr("data-user-name");
     const userId = $(this).attr("data-user-id");
@@ -69,4 +70,5 @@ $(function() {
       .parent()
       .remove();
   });
+});
 });
