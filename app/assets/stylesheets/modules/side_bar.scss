@@ -1,4 +1,5 @@
 .side-bar {
+  text-decoration: none; 
   box-sizing: border-box;
   color: $white;
   width: 300px;
@@ -32,9 +33,11 @@
       box-sizing: border-box;
       padding: 20px 0 40px;
       &__name {
+        color: #ffffff;
         font-size: $side_group_name;
       }
       &__message {
+        color: #ffffff;
         font-size: $side_group_message;
         margin-top: 5px;
       }
